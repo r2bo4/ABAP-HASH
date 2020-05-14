@@ -1,0 +1,11 @@
+CALL FUNCTION ‘CALCULATE_HASH_FOR_CHAR’
+    EXPORTING
+     ALG                  = ‘SHA1’
+     DATA                 = lv_string
+   IMPORTING
+     HASH                 = lv_hash
+   EXCEPTIONS
+     UNKNOWN_ALG          = 1
+     PARAM_ERROR          = 2
+     INTERNAL_ERROR       = 3
+     OTHERS               = 4.
